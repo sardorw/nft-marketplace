@@ -44,7 +44,7 @@ function Sidebar() {
           </ul>
         </nav>
       </div>
-      <div className={styles.backdrop} />
+      <div className={styles.backdrop} onClick={() => setShow(false)} />
     </>
   )
 }

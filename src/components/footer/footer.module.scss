@@ -90,23 +90,25 @@
   }
 }
 
-.join-form {
-  max-width: 420px;
-  margin-top: 20px;
-  justify-content: center;
+.form {
+  .join-form {
+    max-width: 420px;
+    margin-top: 20px;
+    justify-content: center;
 
-  @include sm {
-    flex-direction: column;
-    gap: 16px;
-    max-width: none;
-    background-color: transparent;
+    @include sm {
+      flex-direction: column;
+      gap: 16px;
+      max-width: none;
+      background-color: transparent;
 
-    input {
-      height: 46px;
-    }
+      input {
+        height: 46px;
+      }
 
-    button {
-      height: 46px;
+      button {
+        height: 46px;
+      }
     }
   }
 }

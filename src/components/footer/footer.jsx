@@ -53,7 +53,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className={styles.form}>
             <h5 className={styles.heading}>Join our weekly digest</h5>
             <p className={styles['join-subtitle']}>
               Get exclusive promotions & updates straight to your inbox.
