@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import styles from './Button.module.scss'
+import styles from './button.module.scss'
 import Link from 'next/link'
 
 function Button({ children, href, className, variant, type }) {
