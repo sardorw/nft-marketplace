@@ -1,0 +1,111 @@
+.mushrooms {
+  height: 640px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), $violet-color),
+    url('/images/magic-mushroom.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @include lg {
+    height: 630px;
+  }
+
+  @include sm {
+    height: 600px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  height: 100%;
+  padding-bottom: 60px;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
+
+  @include sm {
+    padding-bottom: 40px;
+  }
+}
+
+.creator {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 99px;
+  background-color: $bg-secondary-color;
+  @include base-text;
+
+  img {
+    width: 24px;
+    border-radius: 99px;
+  }
+}
+
+.heading {
+  margin-top: 30px;
+  @include h2-text;
+
+  @include lg {
+    @include h3-text;
+  }
+}
+
+.time {
+  grid-row-start: span 2;
+  align-self: flex-end;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgba(59, 59, 59, 0.5);
+
+  p {
+    @include space-mono-font;
+    @include caption-text;
+  }
+
+  &-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    @include md {
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include space-mono-font;
+    @include caption-text;
+
+    span:first-child {
+      @include h3-text;
+      font-weight: 700;
+    }
+  }
+
+  &-divider {
+    @include space-mono-font;
+    @include h4-text;
+    font-weight: 700;
+  }
+}
+
+.see-nft {
+  width: max-content;
+  background-color: $white-color;
+  @include base-text;
+  color: $bg-color;
+
+  @include md {
+    width: 100%;
+  }
+}

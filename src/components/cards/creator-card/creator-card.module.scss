@@ -1,0 +1,70 @@
+.card {
+  position: relative;
+  display: block;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $bg-secondary-color;
+  text-align: center;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    margin: 0 auto;
+
+    @include lg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  h4 {
+    margin-top: 20px;
+    @include h5-text;
+
+    @include lg {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    margin-top: 5px;
+    @include base-text;
+    color: $gray-color;
+
+    span {
+      margin-left: 10px;
+      @include space-mono-font;
+      color: $white-color;
+    }
+  }
+}
+
+.number {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background-color: $bg-color;
+  @include space-mono-font;
+  @include base-text;
+  color: $gray-color;
+
+  @include lg {
+    top: 13px;
+    left: 12px;
+  }
+}

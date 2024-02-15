@@ -1,0 +1,41 @@
+.container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include lg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.heading {
+  @include h3-text;
+
+  @include lg {
+    @include h4-text;
+  }
+}
+
+.subheading {
+  margin-top: 10px;
+  @include body-text;
+
+  @include lg {
+    @include base-text;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 30px;
+  margin-top: 48px;
+
+  @include lg {
+    margin-top: 40px;
+  }
+
+  @include sm {
+    grid-template-columns: none;
+  }
+}

@@ -1,0 +1,132 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: flex-start;
+  gap: 30px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include lg {
+    gap: 20px;
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 40px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.title {
+  @include h1-text;
+
+  @include lg {
+    @include h3-text;
+  }
+
+  @include sm {
+    @include h4-text;
+  }
+}
+
+.subtitle {
+  margin-top: 20px;
+  @include body-text;
+
+  @include lg {
+    @include base-text;
+  }
+
+  @include sm {
+    margin-top: 10px;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  grid-row-start: span 2;
+  background-color: $bg-secondary-color;
+
+  @include md {
+    grid-row-start: auto;
+  }
+
+  &__image {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__wrapper {
+    padding: 22px 20px;
+
+    h5 {
+      @include h5-text;
+    }
+  }
+
+  &__creator {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+
+    img {
+      width: 24px;
+      border-radius: 99px;
+    }
+
+    p {
+      @include base-text;
+    }
+  }
+}
+
+.get-started {
+  @include md {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.statistics {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+
+    @include lg {
+      margin-top: 20px;
+    }
+
+    @include md {
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+  }
+
+  &__item {
+    h4 {
+      @include space-mono-font;
+      @include h4-text;
+
+      @include lg {
+        @include body-text;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.6;
+
+      @include lg {
+        @include base-text;
+      }
+    }
+  }
+}

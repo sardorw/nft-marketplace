@@ -1,0 +1,189 @@
+.avatar {
+  height: 370px;
+  padding-bottom: 50px;
+  background-image: linear-gradient(#ffffff00, $violet-color),
+    url('/images/artist-thumbnail.png');
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include lg {
+    height: 330px;
+  }
+
+  @include md {
+    height: 300px;
+  }
+
+  &-container {
+    display: flex;
+    align-items: flex-end;
+    height: 370px;
+
+    @include lg {
+      height: 330px;
+    }
+
+    @include md {
+      justify-content: center;
+      height: 300px;
+    }
+  }
+
+  img {
+    box-sizing: content-box;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    border: 2px solid $bg-color;
+  }
+}
+
+.artist-container {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include lg {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.name {
+  @include h2-text;
+
+  @include lg {
+    @include h3-text;
+  }
+
+  @include sm {
+    @include h4-text;
+  }
+}
+
+.buttons {
+  display: flex;
+  grid-column-start: 2;
+  grid-row: 1 / -1;
+  gap: 20px;
+
+  @include lg {
+    margin-top: 30px;
+  }
+
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.copy {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.follow {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 510px;
+  margin-top: 30px;
+
+  @include sm {
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    width: auto;
+  }
+
+  &__item {
+    h4 {
+      @include space-mono-font;
+      @include h4-text;
+
+      @include lg {
+        @include body-text;
+      }
+    }
+
+    p {
+      @include body-text;
+
+      @include lg {
+        @include base-text;
+      }
+    }
+  }
+}
+
+.bio {
+  margin-top: 30px;
+
+  h4 {
+    @include space-mono-font;
+    @include h5-text;
+    color: $gray-color;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    @include body-text;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.links {
+  margin-top: 30px;
+
+  h4 {
+    @include space-mono-font;
+    @include h5-text;
+    color: $gray-color;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cards {
+  background-color: $bg-secondary-color;
+  border-bottom: 2px solid $bg-color;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: none;
+    }
+  }
+}

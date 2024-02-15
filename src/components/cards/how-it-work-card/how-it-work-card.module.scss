@@ -1,0 +1,54 @@
+.card {
+  padding: 10px 30px 30px;
+  border-radius: 20px;
+  background-color: $bg-secondary-color;
+  text-align: center;
+
+  @include lg {
+    padding: 10px 20px 30px;
+  }
+
+  @include sm {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  img {
+    padding: 0 10px;
+
+    @include lg {
+      padding: 0 5px;
+    }
+
+    @include sm {
+      width: 100px;
+      padding: 0;
+    }
+  }
+
+  h4 {
+    margin-top: 20px;
+    @include h5-text;
+
+    @include lg {
+      @include base-text;
+    }
+
+    @include sm {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    @include base-text;
+
+    @include lg {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+}

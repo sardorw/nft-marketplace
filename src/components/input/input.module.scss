@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 12px 20px 12px 52px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    @include base-text;
+
+    &::placeholder {
+      color: $bg-color;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+  }
+}

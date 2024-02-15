@@ -1,0 +1,67 @@
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin h1-text {
+  font-size: 67px;
+  line-height: 1.1;
+}
+
+@mixin h2-text {
+  font-size: 51px;
+  line-height: 1.1;
+}
+
+@mixin h3-text {
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+@mixin h4-text {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+@mixin h5-text {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+@mixin body-text {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+@mixin base-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@mixin caption-text {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+@mixin space-mono-font {
+  font-family: var(--font-space-mono);
+}

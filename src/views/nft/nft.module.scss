@@ -1,0 +1,13 @@
+.thumbnail {
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+
+  @include lg {
+    height: 420px;
+  }
+
+  @include sm {
+    height: 320px;
+  }
+}

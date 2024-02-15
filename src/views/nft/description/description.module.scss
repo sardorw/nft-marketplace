@@ -1,0 +1,175 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(5, auto);
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include md {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  h4 {
+    @include space-mono-font;
+    @include h5-text;
+    color: $gray-color;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.heading {
+  h1 {
+    @include h2-text;
+
+    @include lg {
+      @include h3-text;
+    }
+
+    @include sm {
+      @include h4-text;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    @include body-text;
+    color: $gray-color;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.time {
+  grid-column-start: 2;
+  grid-row: 1 / -1;
+  align-self: flex-start;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgba(59, 59, 59, 0.5);
+
+  @include md {
+    grid-column-start: auto;
+    grid-row: auto;
+  }
+
+  p {
+    @include space-mono-font;
+    @include caption-text;
+  }
+
+  &-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    @include md {
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include space-mono-font;
+    @include caption-text;
+
+    span:first-child {
+      @include h3-text;
+      font-weight: 700;
+    }
+  }
+
+  &-divider {
+    @include space-mono-font;
+    @include h4-text;
+    font-weight: 700;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.creator {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    font-weight: 600;
+    @include h5-text;
+
+    @include lg {
+      @include base-text;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 99px;
+    }
+  }
+}
+
+.description {
+  max-width: 605px;
+  margin-top: 10px;
+
+  @include md {
+    max-width: none;
+  }
+
+  p {
+    @include body-text;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.details {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    @include body-text;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.tags {
+  div {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+    @include lg {
+      flex-direction: column;
+    }
+
+    a {
+      width: max-content;
+      padding: 12px 30px;
+      background-color: $bg-secondary-color;
+      border-radius: 99px;
+      font-weight: 600;
+      @include base-text;
+      text-transform: uppercase;
+    }
+  }
+}

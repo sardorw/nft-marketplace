@@ -1,0 +1,72 @@
+.container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  @include sm {
+    padding-bottom: 40px;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 60px;
+  border-radius: 20px;
+  background-color: $bg-secondary-color;
+
+  @include lg {
+    gap: 30px;
+    padding: 40px 30px;
+  }
+
+  @include md {
+    grid-template-columns: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.img {
+  border-radius: 20px;
+}
+
+.heading {
+  @include h3-text;
+
+  @include lg {
+    @include h4-text;
+  }
+
+  @include md {
+    margin-top: 30px;
+  }
+}
+
+.subheading {
+  margin-top: 10px;
+  @include body-text;
+
+  @include lg {
+    @include base-text;
+  }
+}
+
+.form {
+  margin-top: 40px;
+
+  @include lg {
+    flex-direction: column;
+    gap: 16px;
+    background-color: transparent;
+
+    input {
+      height: 46px;
+    }
+
+    button {
+      height: 46px;
+    }
+  }
+}

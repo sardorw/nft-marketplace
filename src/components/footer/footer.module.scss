@@ -1,0 +1,132 @@
+.footer {
+  margin-top: auto;
+  background-color: $bg-secondary-color;
+}
+
+.container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+
+  @include xl {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  @include space-mono-font;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.creator {
+  max-width: 240px;
+  margin-top: 30px;
+  @include base-text;
+  color: $gray-light-color;
+
+  @include lg {
+    max-width: none;
+    margin-top: 20px;
+  }
+}
+
+.socials {
+  &-title {
+    margin-top: 20px;
+    @include base-text;
+    color: $gray-light-color;
+  }
+
+  &-wrapper {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}
+
+.heading {
+  @include space-mono-font;
+  @include body-text;
+  text-transform: capitalize;
+}
+
+.nav-list {
+  margin-top: 25px;
+
+  @include lg {
+    margin-top: 20px;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  a {
+    @include base-text;
+    color: $gray-light-color;
+  }
+}
+
+.join-subtitle {
+  max-width: 330px;
+  margin-top: 25px;
+  @include base-text;
+  color: $gray-light-color;
+
+  @include lg {
+    max-width: none;
+    margin-top: 20px;
+  }
+}
+
+.join-form {
+  max-width: 420px;
+  margin-top: 20px;
+  justify-content: center;
+
+  @include sm {
+    flex-direction: column;
+    gap: 16px;
+    max-width: none;
+    background-color: transparent;
+
+    input {
+      height: 46px;
+    }
+
+    button {
+      height: 46px;
+    }
+  }
+}
+
+.line {
+  margin-top: 30px;
+  border: none;
+  border-top: 1px solid $gray-color;
+
+  @include lg {
+    margin-top: 50px;
+  }
+
+  @include sm {
+    margin-top: 30px;
+  }
+}
+
+.copyright {
+  margin-top: 20px;
+  @include caption-text;
+  color: $gray-light-color;
+}

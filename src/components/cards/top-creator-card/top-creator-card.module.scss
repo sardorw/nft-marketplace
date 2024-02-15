@@ -1,0 +1,102 @@
+.card {
+  display: grid;
+  grid-template-columns: 30px 1fr 160px 160px 160px;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background-color: $bg-secondary-color;
+
+  @include lg {
+    grid-template-columns: 30px 1fr 100px 100px;
+
+    & > *:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @include md {
+    grid-template-columns: 24px 1fr 80px;
+    gap: 10px;
+
+    & > *:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @include sm {
+    padding: 10px 13px;
+  }
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: $bg-color;
+  border-radius: 99px;
+  @include space-mono-font;
+  @include base-text;
+
+  @include lg {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: $gray-color;
+  }
+
+  @include sm {
+    width: 24px;
+    height: 24px;
+    @include caption-text;
+  }
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include lg {
+    gap: 12px;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+
+    @include lg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  p {
+    font-weight: 600;
+    @include h5-text;
+
+    @include sm {
+      font-weight: 400;
+      @include base-text;
+    }
+  }
+}
+
+.change,
+.sold,
+.volume {
+  @include space-mono-font;
+  @include base-text;
+  color: white;
+
+  @include sm {
+    @include caption-text;
+  }
+}
+
+.change {
+  color: #00ac4f;
+}

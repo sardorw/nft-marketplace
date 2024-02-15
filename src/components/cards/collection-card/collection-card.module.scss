@@ -1,0 +1,50 @@
+.main-image {
+  border-radius: 20px;
+}
+
+.images-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+
+  img {
+    border-radius: 20px;
+  }
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include space-mono-font;
+  font-weight: 600;
+  @include body-text;
+  border-radius: 20px;
+  background-color: $violet-color;
+
+  @include sm {
+    @include base-text;
+  }
+}
+
+.heading {
+  margin-top: 15px;
+  @include h5-text;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+
+  img {
+    width: 24px;
+    border-radius: 9999px;
+  }
+
+  p {
+    @include base-text;
+  }
+}

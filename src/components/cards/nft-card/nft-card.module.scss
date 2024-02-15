@@ -1,0 +1,68 @@
+.card {
+  display: block;
+  border-radius: 20px;
+  background-color: $bg-secondary-color;
+
+  &.bg-color {
+    background-color: $bg-color;
+  }
+}
+
+.main-img {
+  aspect-ratio: 330 / 295;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.body {
+  padding: 20px 30px 25px;
+
+  @include sm {
+    padding: 20px 20px 25px;
+  }
+
+  h4 {
+    @include h5-text;
+  }
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+
+  img {
+    width: 24px;
+    border-radius: 99px;
+  }
+
+  p {
+    @include space-mono-font;
+    @include base-text;
+  }
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  &-item {
+    p {
+      @include space-mono-font;
+      @include base-text;
+
+      @include sm {
+        @include caption-text;
+      }
+
+      &:first-child {
+        margin-bottom: 8px;
+        @include caption-text;
+        color: $gray-color;
+      }
+    }
+  }
+}

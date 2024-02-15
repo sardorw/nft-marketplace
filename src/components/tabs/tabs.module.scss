@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  padding-top: 10px;
+
+  &.top-line {
+    border-top: 1px solid $bg-secondary-color;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-grow: 1;
+  height: 60px;
+  font-weight: 600;
+  @include h5-text;
+  color: $gray-color;
+
+  @include lg {
+    @include base-text;
+  }
+
+  &:first-child {
+    border-bottom: 2px solid $gray-color;
+    color: white;
+  }
+}
+
+.main-tab {
+  @include sm {
+    display: none;
+  }
+}
+
+.secondary-tab {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.tab-count {
+  padding: 5px 10px;
+  background-color: $bg-secondary-color;
+  border-radius: 99px;
+  @include space-mono-font;
+  font-weight: 400;
+  @include base-text;
+
+  @include lg {
+    @include caption-text;
+  }
+
+  @include sm {
+    display: none;
+  }
+}

@@ -1,0 +1,94 @@
+.header-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include lg {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    @include h2-text;
+
+    @include lg {
+      @include h3-text;
+    }
+
+    @include sm {
+      @include h4-text;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    @include body-text;
+
+    @include lg {
+      @include base-text;
+    }
+  }
+}
+
+.search {
+  position: relative;
+  margin-top: 30px;
+
+  input {
+    width: 100%;
+    padding: 20px;
+    background-color: $bg-color;
+    border: 1px solid $bg-secondary-color;
+    border-radius: 20px;
+    outline: none;
+    @include base-text;
+    color: $gray-color;
+
+    &::placeholder {
+      color: $gray-color;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.cards-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-start: span 2;
+  gap: 30px;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+
+    & > *:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+
+    & > *:nth-child(n + 3) {
+      display: none;
+    }
+  }
+}

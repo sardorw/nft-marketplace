@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+  background-color: $violet-color;
+  font-weight: 600;
+  @include base-text;
+  color: $white-color;
+  cursor: pointer;
+
+  &.outlined {
+    border: 2px solid $violet-color;
+    background-color: transparent;
+    color: $white-color;
+  }
+}
