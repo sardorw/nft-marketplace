@@ -8,18 +8,18 @@ function CollectionCard({ data }) {
       <Link href={`/nft/${data.id}`}>
         <Image
           src={data.imgs[0]}
-          width={330}
-          height={330}
+          width={660}
+          height={660}
           alt="Image"
           className={styles['main-image']}
         />
       </Link>
       <div className={styles['images-wrapper']}>
         <Link href={`/nft/${data.id}`}>
-          <Image src={data.imgs[1]} width={100} height={100} alt="Image" />
+          <Image src={data.imgs[1]} width={200} height={200} alt="Image" />
         </Link>
         <Link href={`/nft/${data.id}`}>
-          <Image src={data.imgs[2]} width={100} height={100} alt="Image" />
+          <Image src={data.imgs[2]} width={200} height={200} alt="Image" />
         </Link>
         <div className={styles.count}>1025+</div>
       </div>

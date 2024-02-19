@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/container/container'
 import Button from '@/components/button/button'
 import { RocketLaunchIcon } from '@/icons'
@@ -16,8 +17,10 @@ function Discover() {
         </div>
 
         <div className={styles.card}>
-          <img
+          <Image
             src="/images/nfts/space-walking.png"
+            width={510}
+            height={401}
             alt="Image"
             className={styles.card__image}
           />
