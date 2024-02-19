@@ -86,6 +86,8 @@
 }
 
 .get-started {
+  width: fit-content;
+
   @include md {
     justify-content: center;
     width: 100%;
